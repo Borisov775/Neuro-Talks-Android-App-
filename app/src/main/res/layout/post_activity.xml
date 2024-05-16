@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/the_post"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:scrollbars="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/cover_post"
+        android:layout_width="wrap_content"
+        android:scaleType="fitXY"
+        android:layout_height="250dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/bci_concept"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+    <TextView
+        android:id="@+id/h1_cover"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:text="@string/h1"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/cover_post"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="10dp"
+        android:textAlignment="viewStart"/>
+
+
+    <TextView
+        android:id="@+id/text_body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_body"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:autoSizeTextType="uniform"
+        app:autoSizeMinTextSize="10sp"
+        app:autoSizeMaxTextSize="100sp"
+        app:autoSizeStepGranularity="1sp"
+        android:scrollbars="vertical"
+        app:layout_constraintStart_toStartOf="@id/h1_cover"
+        app:layout_constraintTop_toBottomOf="@id/h1_cover" />
+
+        <TextView
+            android:id="@+id/author_of_article"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Author:"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/text_body"
+            app:layout_constraintStart_toStartOf="@id/h1_cover"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="#Theme_1"
+            app:layout_constraintBottom_toBottomOf="@id/author_of_article"
+            app:layout_constraintStart_toEndOf="@id/author_of_article"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="100dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="For more information visit links below"
+            android:textColor="@color/black"
+            android:textStyle="bold|italic"
+            app:layout_constraintTop_toBottomOf="@id/author_of_article"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+        <TextView
+            android:id="@+id/reference_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:textColorLink="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/author_of_article"
+            app:layout_constraintStart_toStartOf="@id/author_of_article"
+            android:text="@string/reference_1"/>
+        <TextView
+            android:layout_marginTop="10dp"
+
+            android:id="@+id/reference_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/reference_1"
+            app:layout_constraintStart_toStartOf="@id/reference_1"
+            android:text="@string/reference_2"/>
+        <TextView
+            android:id="@+id/reference_3"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/reference_2"
+            app:layout_constraintStart_toStartOf="@id/reference_2"
+            android:text="@string/reference_3"/>
+        <WebView
+            android:id="@+id/webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+
+            />
+        <com.like.LikeButton
+            android:id="@+id/favorite_post"
+            app:icon_type="Star"
+            app:circle_start_color="#FF0000"
+            app:like_drawable="@drawable/ic_baseline_favorite_24"
+            app:unlike_drawable="@drawable/ic_baseline_favorite_24"
+            app:dots_primary_color="#FF0000"
+            app:dots_secondary_color="#FF0000"
+            app:circle_end_color="#FF0000"
+            app:icon_size="50dp"
+            android:backgroundTint="@color/gray"
+            app:liked="true"
+            android:visibility="visible"
+            app:anim_scale_factor="2"
+            app:is_enabled="true"
+            android:layout_height="50dp"
+            android:layout_width="50dp"
+            app:layout_constraintTop_toBottomOf="@id/reference_3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="MissingConstraints" />
+
+
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:menu="@menu/menu_navigation"
+            app:labelVisibilityMode="labeled"
+            android:layout_gravity="bottom"
+            app:itemIconTint="@color/gray"
+            app:itemTextColor="@color/gray"
+            app:layout_constraintTop_toBottomOf="@id/favorite_post"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,5 +1,20 @@
 <resources>
-    <string name="app_name">ArchitectureComponents</string>
+    <string name="app_name">NeuroBio Talks</string>
     <string name="important">Important</string>
     <string name="priority">Priority</string>
+    <string name="topic_post">BCI</string>
+    <string name="h1">Приложение с системой распознавания эмоций через ЭЭГ сигналы.</string>
+    <string name="text_body">Распознавание эмоций человека посредством новых систем и программ, стало актуальным и перспективным направлением в области аффективных вычислений.  Эмоции играют существенную роль в формировании человеческого интеллекта и всех социальных взаимодействий в целом.
+        Эмоции составляют ключевую часть нашего интеллекта, психологи также называют это эмоциональным интеллектом. Но что такое эмоция?
+        Эмоция - это сложное состояние человека, характеризирующееся физиологическими и когнитивными процессами на ответ реакции, исходящей из внешнего мира.
+        Эмоция не является сугубо психологической субстанцией мышления человека.
+    Существуют также ряд различный моделей,  которые классифицируют эмоции по продолжительности, валентности и степени возбуждения эмоций. Благодаря развитию в области машинного и глубокого обучения появились решения, которые позволяют машинам распознавать и анализировать эмоции человека. Однако наряду с умными алгоритмами классификации возникает сложности с идентификацией а именно сбором человеческих эмоций. Ведь выражения лица, речь, поведение человека могут быть неэффективным источником сбора информации. Поэтому с появлением более чувстительных сенсорных технологий, таких как BCI (brain-computer interface) стало возможным считывание физиологических сигналов, которые улавливают сигналы мозга и используют их в качесвте входных данных для систем, которые понимают корреляцию между эмоциями и изменениями ЭЭГ, а также исключают социальную маркировку (скрытие эмоций). </string>
+    <string name="header_hint">Header of an article</string>
+    <string name="hint_1">Here you can post an article or some facts about your professional area!</string>
+    <string name="reference_1"><u>The article at Notion.com</u></string>
+    <string name="reference_2"><u>Article 2</u></string>
+    <string name="reference_3"><u>Limbic System explained</u></string>
+    <string name="hyperlink">Learn more about Android app development at\n<a name="alpha_key" href="https://learntodroid.com">LearnToDroid.com</a></string>
+    <string name="full_text_post">We could use those technologies in many kinds of humankind s activities, for example, astronauts using non-implanted BCI could remote control the manipulator instead of going out in space to catch radiation. </string>
+    <string name="bio" >With 2.5 years of studying in ITMO University for bachelor degree in software engineering and neurotechnologies I have the confidence that I will be an excellent fit for your assistant program.</string>
 </resources>
